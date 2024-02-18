@@ -5,16 +5,17 @@ void radix_counting_sort(int *array, size_t size, int sig, int *buff);
 void radix_sort(int *array, size_t size);
 
 /**
- * get_max - this gets the max value in an array of ints
+ * get_max - this get the max value in an array of ints.
  * @array: arr of ints
  * @size: size of the arr
- * Return: max int in th arr
+ *
+ * Return: max int in the arr
  */
 int get_max(int *array, int size)
 {
 	int max, i;
 
-	for (max =  array[0], i = 1; i < size; i++)
+	for (max = array[0], i = 1; i < size; i++)
 	{
 		if (array[i] > max)
 			max = array[i];
@@ -24,11 +25,11 @@ int get_max(int *array, int size)
 }
 
 /**
- * radic_counting_sort - this sorts the sig digits of an arr of ints
- * in ascending order using the counting sort algorithm
- * @array: arr of ints
+ * radix_counting_sort - this sort the sig digits of an arr of ints
+ *                       in ascending order using the counting sort algorithm.
+ * @array: array of ints
  * @size: size of the arr
- * @sig: sig digit to sort on
+ * @sig: sig digit to sort on.
  * @buff: buffer to store the sorted arr
  */
 void radix_counting_sort(int *array, size_t size, int sig, int *buff)
@@ -42,7 +43,7 @@ void radix_counting_sort(int *array, size_t size, int sig, int *buff)
 	for (i = 0; i < 10; i++)
 		count[i] += count[i - 1];
 
-	for (i = size - 1; (int) i >= 0; i--)
+	for (i = size - 1; (int)i >= 0; i--)
 	{
 		buff[count[(array[i] / sig) % 10] - 1] = array[i];
 		count[(array[i] / sig) % 10] -= 1;
@@ -54,11 +55,12 @@ void radix_counting_sort(int *array, size_t size, int sig, int *buff)
 
 /**
  * radix_sort - this sort an arr of ints in ascending
- * order using the radix sort algorithm
+ *              order using the radix sort algorithm.
  * @array: arr of ints
- * @size: size of the arr
- * Description: this implements the LSD radix sort algorith,. Prints
- * the arr after each sig digit increase
+ * @size: size of the array.
+ *
+ * Description: this implements the LSD radix sort algorithm. Prints
+ * the array after each sig digit increase.
  */
 void radix_sort(int *array, size_t size)
 {
