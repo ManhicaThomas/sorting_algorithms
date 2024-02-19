@@ -7,12 +7,13 @@ void insertion_sort_deck_value(deck_node_t **deck);
 void sort_deck(deck_node_t **deck);
 
 /**
- * _strcmp - this compares two strs
- * @s1: first str to be compared
- * @s2: second str to be compared
- * Return: positive byte difference if s1 > s2
- * 0 if s1 == s2
- * negative byte difference if s1 < s2
+ * _strcmp - this compares two strs.
+ * @s1: first string to be compared.
+ * @s2: second string to be compared.
+ *
+ * Return: the positive byte difference if s1 > s2
+ *         0 if s1 == s2
+ *         Negative byte difference if s1 < s2
  */
 int _strcmp(const char *s1, const char *s2)
 {
@@ -28,9 +29,10 @@ int _strcmp(const char *s1, const char *s2)
 }
 
 /**
- * get_value - this gets numerical value of a card
- * @card: pointer to a deck_node_t card
- * Return: numerical value of the card
+ * get_value - this gets the numerical value of a card.
+ * @card: pointer to a deck_node_t card.
+ *
+ * Return: numerical value of the card.
  */
 char get_value(deck_node_t *card)
 {
@@ -64,8 +66,8 @@ char get_value(deck_node_t *card)
 }
 
 /**
- * insertion_sort_deck_kind - this sorts a deck of cards from spades to diamonds
- * @deck: pointer to the head of a deck_node_t doubly-linked list
+ * insertion_sort_deck_kind - sorts a deck of cards from spades to diamonds.
+ * @deck: pointer to the head of a deck_node_t doubly-linked list.
  */
 void insertion_sort_deck_kind(deck_node_t **deck)
 {
@@ -93,10 +95,10 @@ void insertion_sort_deck_kind(deck_node_t **deck)
 }
 
 /**
- * insertion_sort_deck_value - this sorts of cards sorted from
- * spades to diamonds from ace to king
- * @deck: pointer to the head of a deck_node_t doubly-linked list
- *  */
+ * insertion_sort_deck_value - sorts a deck of cards sorted from
+ *                             spades to diamonds from ace to king.
+ * @deck: pointer to the head of a deck_node_t doubly-linked list.
+ */
 void insertion_sort_deck_value(deck_node_t **deck)
 {
 	deck_node_t *iter, *insert, *tmp;
@@ -125,9 +127,9 @@ void insertion_sort_deck_value(deck_node_t **deck)
 }
 
 /**
- * sort_deck - Sort a deck of cards from ace to king and
+ * sort_deck - sorts a deck of cards from ace to king and
  *             from spades to diamonds.
- * @deck: A pointer to the head of a deck_node_t doubly-linked list.
+ * @deck: pointer to the head of a deck_node_t doubly-linked list.
  */
 void sort_deck(deck_node_t **deck)
 {
