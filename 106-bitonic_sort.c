@@ -6,13 +6,15 @@
 #include "sort.h"
 
 void swap_ints(int *a, int *b);
-void bitonic_merge(int *array, size_t size, size_t start, size_t seq, char flow);
+void bitonic_merge(int *array, size_t size, size_t start, size_t seq,
+		char flow);
 void bitonic_seq(int *array, size_t size, size_t start, size_t seq, char flow);
+void bitonic_sort(int *array, size_t size);
 
 /**
- * swap_ints: -  this swaps two ints in an arr
- * @a: first int to swap
- * @b: second int to swap
+ * swap_ints - this swap two ints in an arr
+ * @a: first int to swap.
+ * @b: second int to swap.
  */
 void swap_ints(int *a, int *b)
 {
@@ -24,12 +26,12 @@ void swap_ints(int *a, int *b)
 }
 
 /**
- * bitonic_merge - this sort a bitonic seq inside an arr of ints
- * @array: arr of ints
+ * bitonic_merge - this sorts a bitonic seq inside an arr of ints.
+ * @array: array of ints
  * @size: size of the arr
- * @start: starting index of the seq in arr to sort
- * @seq: size of the seq to sort
- * @flow:direction to sort in
+ * @start: starting index of the seq in arr to sort.
+ * @seq: size of the seq to sort.
+ * @flow: direction to sort in.
  */
 void bitonic_merge(int *array, size_t size, size_t start, size_t seq,
 		char flow)
@@ -50,12 +52,12 @@ void bitonic_merge(int *array, size_t size, size_t start, size_t seq,
 }
 
 /**
- * bitonic_seq - this converts an arr of ints into a bitonic seq
+ * bitonic_seq - this converts an arr of ints into a bitonic seq.
  * @array: arr of ints
  * @size: size of the arr
- * @start: starting index of a block of the building bitonic seq
+ * @start: starting index of a block of the building bitonic seq.
  * @seq: size of a block of the building bitonic seq
- * @flow: dir to sort the bitonic seq block in
+ * @flow: direction to sort the bitonic seq block in.
  */
 void bitonic_seq(int *array, size_t size, size_t start, size_t seq, char flow)
 {
@@ -78,11 +80,12 @@ void bitonic_seq(int *array, size_t size, size_t start, size_t seq, char flow)
 
 /**
  * bitonic_sort - this sort an arr of ints in ascending
- * order using the bitonic sort algorithm
+ *                order using the bitonic sort algorithm.
  * @array: arr of ints
  * @size: size of the arr
- * Description: this prints the arr after each swap. It only works for
- * * size = 2^k where k >= 0 (ie. size equal to powers of 2).
+ *
+ * Description: this prints the array after each swap. Only works for
+ * size = 2^k where k >= 0 (ie. size equal to powers of 2).
  */
 void bitonic_sort(int *array, size_t size)
 {
